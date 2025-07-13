@@ -15,3 +15,8 @@ The model classifies knee X-rays into five distinct stages according to the Kell
 This project utilizes the **Annotated Dataset for Knee Arthritis Detection** available on Kaggle. You can download it from [this link](https://www.kaggle.com/datasets/hafiznouman786/annotated-dataset-for-knee-arthritis-detection).
 
 The training dataset contains X-ray images organized into folders corresponding to the five arthritis grades.
+
+## How to run
+First ensure that you have your **kaggle API key** visible to the Kaggle CLI (inside of `~/.kaggle`)
+
+Then, setup a python virtual env and run `pip install -r requirements.txt`
