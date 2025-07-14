@@ -1,5 +1,17 @@
+[client]
+showErrorDetails = "stacktrace"
+
+[logger]
+level = "info"
+
+[browser]
+gatherUsageStats = false
+
 [server]
-enableStaticServing = true
+enableStaticServing = false
+enableCORS = false
+corsAllowedOrigins = []
+enableXsrfProtection = false
 
 [theme]
 primaryColor = "#bb5a38"

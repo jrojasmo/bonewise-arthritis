@@ -4,13 +4,17 @@ from keras.applications import efficientnet
 from PIL import Image
 import numpy as np
 import cv2
+from pathlib import Path
 
-PATH_TO_MODEL = '../model/best_knee_model_efficientnet.keras'
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+PATH_TO_MODEL = SCRIPT_DIR.parent / "model" / "best_knee_model_efficientnet.keras"
+print(PATH_TO_MODEL)
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
     page_title="Knee Arthritis Detection",
-    page_icon="😷",
+    page_icon="🩻",
     layout="centered"
 )
 
@@ -58,17 +62,20 @@ col1, col2 = st.columns((1, 1), gap="large")
 with col1:
     st.title("🩻 Knee Arthritis Classifier")
     st.markdown(
-        "Upload a knee X-ray image, and the model will predict its arthritis grade"
-        "according to the Kellgren-Lawrence (KL) scale.\n"
-        "* Grade 0: Normal\n" 
-        "* Grade 1: Doubtful\n"
-        "* Grade 2: Mild\n"
-        "* Grade 3: Moderate\n"
-        "* Grade 4: Severe\n"
+    """
+    **Upload a knee X-ray image**, and the model will predict its arthritis grade  
+    based on the **Kellgren-Lawrence (KL) scale**:
+
+    - 🟢 **Grade 0**: Normal  
+    - 🟡 **Grade 1**: Doubtful  
+    - 🟠 **Grade 2**: Mild  
+    - 🔶 **Grade 3**: Moderate  
+    - 🔴 **Grade 4**: Severe  
+    """
     )
 
     uploaded_file = st.file_uploader(
-        "Choose an X-ray image...",
+        "Choose an X-ray knee image...",
         type=["jpg", "jpeg", "png"]
     )
 
