@@ -20,3 +20,5 @@ The training dataset contains X-ray images organized into folders corresponding 
 First ensure that you have your **kaggle API key** visible to the Kaggle CLI (inside of `~/.kaggle`)
 
 Then, setup a python virtual env and run `pip install -r requirements.txt`
+
+To run the web_app locally you can execute `streamlit run web_app/streamlit_app.py`
