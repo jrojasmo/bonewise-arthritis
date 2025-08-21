@@ -22,3 +22,7 @@ First ensure that you have your **kaggle API key** visible to the Kaggle CLI (in
 Then, setup a python virtual env and run `pip install -r requirements.txt`
 
 To run the web_app locally you can execute `streamlit run web_app/streamlit_app.py`
+
+## Extras
+- Video [Samsung Innovation Campus - Capstone](https://youtu.be/O__bkS5B648?si=8-fuxJKrqZDgpK9l)
+- Hugging Face 🤗 [BoneWise App](https://huggingface.co/spaces/luvakor/bonewise-arthritis-app)
